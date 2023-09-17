@@ -1,26 +1,25 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
-import java.util.Collection;
+import java.util.*;
+
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public String getStreet() {
-        // TODO: implement method!
-        return null;
-    }
+    private String street;
+    private int number;
 
-    public Integer getNumber() {
-        // TODO: implement method!
-        return null;
-    }
+    @ManyToMany(cascade = CascadeType.PERSIST)
+    private Set<Customer> customers = new HashSet<>();
 
-    public Collection<Customer> getOwners() {
-        // TODO: implement method!
-        return null;
-    }
+
 }

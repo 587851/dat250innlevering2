@@ -1,26 +1,31 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import no.hvl.dat250.jpa.tutorial.relationshipexample.Person;
 
 @Entity
+@Getter
+@Setter
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public String getName() {
-        // TODO: implement method!
-        return null;
-    }
+    private String name;
 
-    public Collection<Address> getAddresses() {
-        // TODO: implement method!
-        return null;
-    }
+    @ManyToMany(mappedBy = "customers")
+    private Collection<Address> addresses = new ArrayList<>();
 
-    public Collection<CreditCard> getCreditCards() {
-        // TODO: implement method!
-        return null;
-    }
+    @ManyToMany()
+    private Collection<CreditCard> creditcards = new ArrayList<>();
+
+
+
 }
