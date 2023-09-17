@@ -1,4 +1,4 @@
-![image](https://github.com/587851/dat250innlevering2/assets/69521897/356ef26e-db15-4d01-a27b-862bebf04d0d)Where is the database? Explain the used database and how/when it runs.
+Where is the database? Explain the used database and how/when it runs.
 - The database that is being used is Hibernate H2 and it is stored in DB.mv.db. The database is stored locally and it get cleared before every run of the main code
 
 
