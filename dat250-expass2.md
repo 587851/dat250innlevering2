@@ -23,7 +23,7 @@ Hibernate:
 Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report. Do the created tables correspond to your initial thoughts regarding the exercise?
 
 - To display the database schema i used the website "Dbdiagram". I got the sql script by changing "hibernate.show_sql" to true in persistence.xml. I had to remove 
-hibernate from the script to make it work. I also had to rmeove the job, family and person tables to get the correct result.
+hibernate from the script to make it work. I also had to remove the job, family and person tables to get the correct result.
 
 ![image](https://github.com/587851/dat250innlevering2/assets/69521897/dc4a432f-1f2a-4900-8a24-c3dd2878010a)
 
